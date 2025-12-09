@@ -1,95 +1,164 @@
+:root {
+    --primary-color: #6a1b9a; /* Deep Purple */
+    --primary-hover: #4a148c;
+    --secondary-color: #f3e5f5; /* Light Lavender */
+    --text-color: #333;
+    --bg-gradient: linear-gradient(135deg, #fdfbfd 0%, #f3e5f5 100%);
+    --card-shadow: 0 10px 20px rgba(106, 27, 154, 0.1);
+    --border-radius: 12px;
+}
+
 body {
-    background-color: #f7f2fa;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
+    background: var(--bg-gradient);
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h2, h3 {
-    color: #5a2a83;
-    font-weight: 600;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.navbar {
+    background-color: white !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar-brand {
+    color: var(--primary-color) !important;
+    font-weight: 800;
+    font-size: 1.5rem;
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1200px;
+    flex: 1;
 }
-
-
-.navbar-brand{
-    color: #5a2a83;
-}
-
 
 .card {
     background-color: #fff;
-    border: 1px solid #d6c6e1;
-    box-shadow: 0 4px 12px rgba(90, 42, 131, 0.1);
-    border-radius: 12px;
-    padding: 2rem;
+    border: none;
+    box-shadow: var(--card-shadow);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    transition: transform 0.3s ease;
 }
 
+.card:hover {
+    transform: translateY(-2px);
+}
 
 .form-label {
-    font-weight: 500;
-    color: #5a2a83;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
 }
 
 .form-control, .form-select {
-    border: 1px solid #c3b4d8;
-    border-radius: 6px;
-    padding: 10px;
-}
-
-
-.text-danger {
-    font-size: 0.9rem;
-    margin-top: 4px;
-}
-
-
-.btn {
-    font-weight: 500;
-    padding: 10px 20px;
+    border: 2px solid #e1bee7;
     border-radius: 8px;
+    padding: 12px;
     transition: all 0.3s ease;
 }
 
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(106, 27, 154, 0.1);
+}
+
+.btn {
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
 
 .btn-primary {
-    background-color: #7a45b3;
-    color: white;
+    background-color: var(--primary-color);
     border: none;
+    box-shadow: 0 4px 6px rgba(106, 27, 154, 0.2);
 }
 
 .btn-primary:hover {
-    background-color: #682da5;
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 8px rgba(106, 27, 154, 0.3);
 }
 
-
 .btn-outline-primary {
-    border: 2px solid #7a45b3;
-    color: #7a45b3;
-    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
 .btn-outline-primary:hover {
-    background-color: #7a45b3;
+    background-color: var(--primary-color);
     color: white;
 }
 
+.table {
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
 
-.btn-group {
+.table thead th {
+    border: none;
+    color: var(--primary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.table tbody tr {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: transform 0.2s;
+}
+
+.table tbody tr:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.table td {
+    border: none;
+    padding: 1.2rem 1rem;
+    vertical-align: middle;
+}
+
+.table td:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.table td:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+footer {
+    background-color: white;
+    color: var(--primary-color);
+    padding: 2rem 0;
+    margin-top: auto;
+    border-top: 1px solid #f3e5f5;
+}
+
+/* Login Specifics */
+.login-container {
+    min-height: 80vh;
     display: flex;
-    gap: 10px;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin-top: 1.5rem;
+    align-items: center;
+    justify-content: center;
 }
 
-
-.text-start {
-    text-align: left;
-}
-
-footer{
-    color: #5a2a83;
+.login-card {
+    width: 100%;
+    max-width: 400px;
 }
