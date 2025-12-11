@@ -109,4 +109,4 @@ Al iniciar la aplicación, si no existe, se crea automáticamente:
 
 La documentación interactiva de la API está disponible en:
 
-- **Swagger UI:** `http://localhost:8080/swagger-ui/index.html` (o la ruta configurada)
+- **Swagger UI:** `http://localhost:8080/swagger-ui/index.html`
