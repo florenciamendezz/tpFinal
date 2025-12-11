@@ -13,7 +13,6 @@ Este proyecto fue realizado como parte del Trabajo Práctico N.º 6 de la materi
 - ✅ Gestión de géneros (alta, edición, eliminación)
 - ✅ Validaciones en los formularios
 - ✅ **Sistema de Login y Seguridad** con Spring Security
-- ✅ **Roles de Usuario** (ADMIN, VA)
 - ✅ **Documentación de API** con Swagger UI
 - ✅ Visualización de los datos en PhpMyAdmin
 
@@ -79,7 +78,7 @@ Tablas incluidas:
 | id       | Numérico | Clave primaria, autogenerado             |
 | username | Texto    | Único, utilizado para login              |
 | password | Texto    | Almacenada (puede requerir encriptación) |
-| rol      | Texto    | Roles: ADMIN, VA                         |
+| rol      | Texto    | Roles: ADMIN                      |
 
 ---
 
