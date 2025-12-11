@@ -42,7 +42,7 @@ El proyecto sigue el patrón MVC (Modelo - Vista - Controlador) y está dividido
 - Spring Data JPA
 - Spring Security
 - Thymeleaf
-- MariaDB
+- MySQL
 - Maven
 - SpringDoc OpenAPI (Swagger)
 - Lombok
