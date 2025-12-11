@@ -14,7 +14,6 @@ Este proyecto fue realizado como parte del Trabajo Práctico N.º 6 de la materi
 - ✅ Validaciones en los formularios
 - ✅ **Sistema de Login y Seguridad** con Spring Security
 - ✅ **Documentación de API** con Swagger UI
-- ✅ Visualización de los datos en PhpMyAdmin
 
 ---
 
