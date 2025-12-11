@@ -24,7 +24,7 @@ public class DataInitializer implements CommandLineRunner {
         if (admin == null) {
             admin = new Usuario();
             admin.setUsername("admin");
-            admin.setPassword("admin"); // Contraseña plana para NoOpPasswordEncoder
+            admin.setPassword("admin");
             admin.setRol("ADMIN");
             usuarioRepositorio.save(admin);
             logger.info(">>> Usuario 'admin' creado con contraseña 'admin'");
