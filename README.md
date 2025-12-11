@@ -88,12 +88,26 @@ Tablas incluidas:
 Archivo `src/main/resources/application.properties`:
 
 ```properties
-spring.datasource.url=jdbc:mariadb://localhost:3306/cine
-spring.datasource.username=root
-spring.datasource.password=
+server.port=8082
+spring.application.name=crud
 
+# --- DATASOURCE ---
+spring.datasource.url=jdbc:mysql://localhost:3306/cine
+spring.datasource.username=root
+spring.datasource.password=1234
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# --- JPA / HIBERNATE ---
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
+spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
+
+# --- LOGGING ---
+server.error.whitelabel.enabled=false
+logging.level.org.springframework.web=DEBUG
+logging.level.com.cine.crud=DEBUG
+
+# --- THYMELEAF ---
 spring.thymeleaf.cache=false
 ```
 
